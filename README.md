@@ -1,142 +1,96 @@
-# Module 12 Object-Oriented Programming: Team Profile Generator
+# Team Profile Generator
+        
+## 🌟[Description](#table-of-contents)
+This app generates a team profile using the Inquirer module from Node.js and displays the information on a newly created HTML page. This app focused on OOP and TDD using jest.
 
-## Your Task
+<p>
+    <img src="https://img.shields.io/badge/license-MIT-yellow"/>
+    <img src="https://img.shields.io/badge/-HTML-brightgreen" />
+    <img src="https://img.shields.io/badge/-CSS-lightgrey" />
+    <img src="https://img.shields.io/badge/-JavaScript-blue" />
+    <img src="https://img.shields.io/badge/-bootstrap-yellowgreen"  />
+    <img src="https://img.shields.io/badge/-node.js-orange" />
+    <img src="https://img.shields.io/badge/-jest [TDD]-red" />
+</p>
 
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
+## Table-of-Contents
+* [Description](#description)
+* [User Story](#User-Stor)
+* [Acceptance Criteria](#Acceptance-Criteria)
+* [Mock-Up](#Mock-Up)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#License)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [FAQs](#faqs)
+  
 
-## User Story
+## 👤 [User Story](#table-of-contents)
 
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
-
-## Instructions
-
-* Create a command-line application that accepts accepts user input using the provided starter code.   
-  * Create classes for each team member provided and export them. The tests for these classes (in the `_tests_` directory) must ALL pass.     
-    * The first class is an `Employee` parent class with the following properties and methods:       
-      * `name`
-      * `id`
-      * `email`
-      * `getName()`
-      * `getId()`
-      * `getEmail()`
-      * `getRole()`&mdash;returns `'Employee'`     
-    * The other three classes will extend `Employee`.      
-    * In addition to `Employee`'s properties and methods, `Manager` will also have the following:
-      * `officeNumber`
-      * `getRole()`&mdash;overridden to return `'Manager'`
-    * In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-      * `github`&mdash;GitHub username
-      * `getGithub()`
-      * `getRole()`&mdash;overridden to return `'Engineer'`
-    * In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-      * `school`
-      * `getSchool()`
-      * `getRole()`&mdash;overridden to return `'Intern'`
-    * Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.   
-  * Write code in `index.js` that uses inquirer to gather information about the development team members and creates objects for each team member using the correct classes as blueprints.
-    * When a user starts the application then they are prompted to enter the **team manager**’s:
-      * Name
-      * Employee ID
-      * Email address
-      * Office number
-    * When a user enters those requirements then the user is presented with a menu with the option to:
-      * Add an engineer
-      * Add an intern 
-      * Finish building the team
-    * When a user selects the **engineer** option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Engineer's Name
-      * ID
-      * Email
-      * GitHub username
-    * When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Intern’s name
-      * ID
-      * Email
-      * School
-    * When a user decides to finish building their team then they exit the application, and the HTML is generated.
-  * Call the `render` function (provided for you) and pass in an array containing all employee objects; 
-    * The `render` function will generate and return a block of HTML including templated divs for each employee!
-  * Create an HTML file using the HTML returned from the `render` function. 
-    * Write it to a file named `team.html` in the `output` folder. 
-    * You can use the provided variable `outputPath` to target this location.
-
----
-
-## Mock-Up
-
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/14-object-oriented-programming-challenge-demo.png)
-
-The styling in the image is just an example, so feel free to add your own.
-
----
-
-## Getting Started
-
-This Challenge will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
-
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
-
-```bash
-node index.js
+``` 
+AS A manager
+I WANT to generate a webpage that displays my team's basic info
+SO THAT I have quick access to their emails and GitHub profiles
 ```
 
----
 
-## Hints
+## 🔑 [Acceptance Criteria](#table-of-contents)
 
-* You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
+```
+GIVEN a command-line application that accepts user input
+WHEN I am prompted for my team members and their information
+THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+WHEN I click on an email address in the HTML
+THEN my default email program opens and populates the TO field of the email with the address
+WHEN I click on the GitHub username
+THEN that GitHub profile opens in a new tab
+WHEN I start the application
+THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+WHEN I enter the team manager’s name, employee ID, email address, and office number
+THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+WHEN I select the engineer option
+THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
+WHEN I select the intern option
+THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+WHEN I decide to finish building my team
+THEN I exit the application, and the HTML is generated
+```
 
-* The different employee types should all inherit some methods and properties from a base class of `Employee`.
- 
-* Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order for the provided `render` function to work!
-  
-* You may need to check if the `output` folder exists and create it if it does not.
+## 📺 [Mock-Up](#table-of-contents)
 
----
+![Screenshot](./src/readme_src/desktop-screenshot.png)
 
-## Grading Requirements
+![Video](./src/readme_src/Team-Profile-Generator.gif)
 
-This Challenge is graded based on the following criteria: 
+### [ Video Link ](https://drive.google.com/file/d/1hghZ9boyzJ7C9ws7k8jF6jxHf31cWWjE/view?usp=share_link)
 
-### Deliverables: 25%
+## ⚙️ [Installation](#table-of-contents)
+Use your terminal to clone or download or copy the zip file to a directory of your choice. Then open the file in VS Code or whatever editor you use. In VS Code, open the terminal and navigate to Team Profile Generator in the root directory. Now you can run the application!
+     
+## 💯 [Usage](#table-of-contents)
+Launch the terminal by typing 'node index' after the installation is complete. After answering the prompts, you should see a console log showing your answers, a message that says ‘Team Proflies created success!’, and you should see your file called ‘index.html’ flie in src folder.
+         
+## 📑 [License](#table-of-contents)
+<img src="https://img.shields.io/badge/license-MIT-yellow"/>
 
-* A sample HTML file generated using the application must be submitted.
+Your repository is licensed under an mit open source license, so other people can contribute more easily.More information can be found by clicking this [link.](https://choosealicense.com/licenses/mit)
 
-* Your GitHub repository containing your application code.
+## 🤝 [Contributing](#table-of-contents)
+We are open to all kinds of contributions. If you want to:
+* 🤔 Suggest a feature
+* 🐛 Report an issue
+* 📖 Improve documentation
+* 👨‍💻 Contribute to the code
 
-### Technical Acceptance Criteria: 50%
+We are excited that you are reading this and are willing to contribute. No need to think big. Even a typo fix might save our day and make you a hero. Every contribution counts!
+     
+Feel free to check [issues page](https://github.com/manolisgi/Team-Profile-Generator/issues) 
+     
+## 🚀[Tests](#table-of-contents)
+Open this file in VS Code to test it. Using the terminal, open the Team Profile Generator folder and run the 'npm run test' command. You can view a preview of the test this application.
+     
+## 🤔 [FAQs](#table-of-contents)
+Please contact me using the following links:
 
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-	* All tests pass using the [Jest package](https://www.npmjs.com/package/jest).
-
-  * The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
-
-### Repository Quality: 25%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality readme with description.
-
----
-
-## Review
-
-You are required to submit the following for review:
-
-* A sample HTML file generated using your application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+[GitHub](https://github.com/manolisgi/ Email: manolisgi@gmail.com
