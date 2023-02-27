@@ -93,4 +93,4 @@ Open this file in VS Code to test it. Using the terminal, open the Team Profile 
 ## 🤔 [FAQs](#table-of-contents)
 Please contact me using the following links:
 
-[GitHub](https://github.com/manolisgi/ Email: manolisgi@gmail.com
+GitHub https://github.com/manolisgi/ Email: manolisgi@gmail.com
