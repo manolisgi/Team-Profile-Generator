@@ -10,14 +10,13 @@ This app generates a team profile using the Inquirer module from Node.js and dis
     <img src="https://img.shields.io/badge/-JavaScript-blue" />
     <img src="https://img.shields.io/badge/-bootstrap-yellowgreen"  />
     <img src="https://img.shields.io/badge/-node.js-orange" />
-    <img src="https://img.shields.io/badge/-jest [TDD]-red" />
+
 </p>
 
 ## Table-of-Contents
 * [Description](#description)
 * [User Story](#User-Stor)
 * [Acceptance Criteria](#Acceptance-Criteria)
-* [Mock-Up](#Mock-Up)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#License)
@@ -59,11 +58,7 @@ THEN I exit the application, and the HTML is generated
 
 ## 📺 [Mock-Up](#table-of-contents)
 
-![Screenshot](./src/readme_src/desktop-screenshot.png)
-
-![Video](./src/readme_src/Team-Profile-Generator.gif)
-
-### [ Video Link ](https://drive.google.com/file/d/1hghZ9boyzJ7C9ws7k8jF6jxHf31cWWjE/view?usp=share_link)
+![Screenshot](./starter/images/Team%20Profile%20Generator.png)
 
 ## ⚙️ [Installation](#table-of-contents)
 Use your terminal to clone or download or copy the zip file to a directory of your choice. Then open the file in VS Code or whatever editor you use. In VS Code, open the terminal and navigate to Team Profile Generator in the root directory. Now you can run the application!
@@ -77,13 +72,13 @@ Launch the terminal by typing 'node index' after the installation is complete. A
 Your repository is licensed under an mit open source license, so other people can contribute more easily.More information can be found by clicking this [link.](https://choosealicense.com/licenses/mit)
 
 ## 🤝 [Contributing](#table-of-contents)
-We are open to all kinds of contributions. If you want to:
+I am open to all kinds of contributions. If you want to:
 * 🤔 Suggest a feature
 * 🐛 Report an issue
 * 📖 Improve documentation
 * 👨‍💻 Contribute to the code
 
-We are excited that you are reading this and are willing to contribute. No need to think big. Even a typo fix might save our day and make you a hero. Every contribution counts!
+I am excited that you are reading this and are willing to contribute. No need to think big. Even a typo fix might save our day and make you a hero. Every contribution counts!
      
 Feel free to check [issues page](https://github.com/manolisgi/Team-Profile-Generator/issues) 
      
@@ -93,4 +88,4 @@ Open this file in VS Code to test it. Using the terminal, open the Team Profile 
 ## 🤔 [FAQs](#table-of-contents)
 Please contact me using the following links:
 
-GitHub https://github.com/manolisgi/ Email: manolisgi@gmail.com
+GitHub https://github.com/manolisgi/ 
