@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const manager = require('./lib/manager');
+const Manager = require('./lib/manager');
 const engineer = require('./lib/engineer');
 const intern = require('./lib/intern');
 const renderTeam = require('./src/page-template');
@@ -29,6 +29,8 @@ function run() {
       }
       else if (inputs.role === 'No More Members') {
         createTeam();
+        console.log("Generating team profile...");
+        // console.log(teamArray);
       }
     })
 }
@@ -92,8 +94,8 @@ function managerQuestion() {
       }
     },
   ]).then((answers) => {
-    const Manager = new manager(answers.mName, answers.mID, answers.mEmail, answers.mOfficeNumber);
-    teamArray.push(Manager);
+    const manager = new Manager(answers.mName, answers.mID, answers.mEmail, answers.mOfficeNumber);
+    teamArray.push(manager);
     run();
   });
 }
